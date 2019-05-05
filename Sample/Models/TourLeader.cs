@@ -26,11 +26,6 @@ namespace Sample.Models
         
         public List<string> destinationOpted { get; set; }
 
-        public int ComputeCost(int days)
-        {
-            return 4;
-        }
-
         public virtual double GetRate()
         {
             return 0;

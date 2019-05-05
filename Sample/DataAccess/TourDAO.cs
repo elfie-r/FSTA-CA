@@ -18,7 +18,7 @@ namespace Sample.DataAccess
 
         public TourDAO()
         {
-            string connectionString = "Data Source=LAPTOP-0TR4GNV0;Initial Catalog=Sample;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            string connectionString = "Data Source=;Initial Catalog=Sample;Integrated Security=True;Connect Timeout=60;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             cn = new SqlConnection(connectionString);
             
         }
