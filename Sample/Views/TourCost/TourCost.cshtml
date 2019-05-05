@@ -1,0 +1,113 @@
+﻿
+@model Sample.Models.FormTourCost
+
+@{
+    ViewBag.Title = "TourCost";
+}
+
+<h2>TourCost</h2>
+
+<div>
+    <h4>Cost of Tour Leader</h4>
+    <p>
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+
+
+            <div class="form-horizontal">
+
+                <br />
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(model => model.tourLeader.TourLeaderId, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.tourLeader.TourLeaderId, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.tourLeader.TourLeaderId, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.noOfDays, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.noOfDays, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.noOfDays, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Calculate" class="btn btn-default" />
+                    </div>
+                </div>
+            </div>
+        }
+    </p>
+</div>
+<div>
+    
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tourLeader.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tourLeader.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tourLeader.ContactNo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tourLeader.ContactNo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tourLeader.EmailAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tourLeader.EmailAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tourLeader.Rank)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tourLeader.Rank)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tourLeader.dailyRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tourLeader.dailyRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tourLeader.Availability)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tourLeader.Availability)
+        </dd>
+
+        </br>
+        <dt>
+            @Html.DisplayNameFor(model => model.tourLeadCost)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tourLeadCost)
+        </dd>
+
+    </dl>
+</div>
+
+
