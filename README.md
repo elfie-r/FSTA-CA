@@ -11,7 +11,7 @@ Use of DAO pattern.
 
 Sample.mdf is the test database built for the application. 
 
-1. Load the database before running the solution.
+1. Load the database.
 
 2. Update code with local machine name in files TourDAO.cs and TourLeaderDAO.cs
 
